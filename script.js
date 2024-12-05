@@ -17,3 +17,4 @@ function toggleTexto(parrafoId) {
         boton.textContent = 'Leer más';
     }
 }
+

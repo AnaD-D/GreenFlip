@@ -15,7 +15,8 @@
     <!-- Barra de navegación -->
     <img src="./Screenshot 2024-10-03 10.13.28 AM.png" alt="" class="logotipo" />
     <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
-    <div class="menu">
+    <div class="navbar-links">
+      <div class="menu">
       <ul class="navbar-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#hacer">Lo que Hacemos</a></li>
@@ -24,6 +25,7 @@
         <li><a href="#productos">Productos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+    </div>
     </div>
   </nav>
 
@@ -37,9 +39,10 @@
     <div class="main-imagenes">
       <img class="item-one" src="./imagenes/1 (2).png" alt="tortuga" />
       <img class="item-two" src="./imagenes/2.png" alt="plastico" />
-      <button class="callout" onclick="location.href='Blog_html.html'">nuestro trabajo</button>
     </div>
-    
+    <div class="blog">
+    <button class="callout" onclick="location.href='Blog_html (1).html'">nuestro trabajo</button>
+  </div>
   </div>
   <!-- Lo que Hacemos -->
   <div class="hacer" id="hacer">
@@ -192,6 +195,8 @@
     <div class="">
     <img src="./imagenes/12 (1).png" alt="">
     </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+  <button class="next" onclick="nextSlide()">&#10095;</button>
   </div>
   
   </div>
@@ -249,7 +254,16 @@
       <button type="submit">Enviar</button>
     </form>
   </div>
-    <div class="infoEmpresa"></div>
+    <div class="infoEmpresa">
+      <div class="tarjeta">
+        <img src="./imagenes/pexels-pawelkalisinski-1076758.jpg" alt="Imagen de la tarjeta">
+        <h4>¡Más proyectos!</h4>
+        <h3><i>COMMING SOON...</i></h3>
+        <p>En GreenFlip seguimos innovando con productos reciclados y organizando actividades para limpiar el planeta. ¡Únete a nuestro compromiso por un futuro más verde!</p>
+        <button onclick="location.href='Blog_html (1).html'">Más información</button>
+      </div>
+      
+    </div>
   </div>
     <p class="copyright">Todos los derechos reservados para ©GreenFlip</p>
 

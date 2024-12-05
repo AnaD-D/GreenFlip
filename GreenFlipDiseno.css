@@ -100,10 +100,15 @@ ul li a {
     flex-direction: row;
 }
 
+.blog {
+display: flex;
+justify-content: center;
+margin-top: 10px;
+}
+
 .callout {
-    position: absolute;
+    justify-self: center;
     padding: 10px;
-    top: 72%;
     background-color: #fff;
     color: #000;
     font-size: 24px;
@@ -291,42 +296,29 @@ ul li a {
     .hero-text h3 {
         font-size: 0.9rem;
         line-height: 0.1;
-        /* Reducir el tamaño del texto */
     }
 
     .logotipo {
         width: 50px;
-        /* Ajustar tamaño del logo */
     }
 
-    .menu {
-        display: none;
-        /* Ocultar la lista de enlaces */
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background-color: #333;
-        width: 100%;
-        text-align: center;
-    }
+    .menu,
+.navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+}
 
-    .navbar-links {
-        display: none;
-        /* Ocultar la lista de enlaces */
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background-color: #333;
-        width: 100%;
-        text-align: center;
-    }
-
-    .navbar-links.active {
-        display: flex;
-        /* Mostrar cuando esté activo */
-    }
+/* Mostrar el menú cuando esté activo */
+.menu.active,
+.navbar-links.active {
+    display: flex; /* Cambiado a flex para mantener consistencia con flexbox */
+}
 
     .navbar-toggle {
         display: block;
@@ -342,6 +334,14 @@ ul li a {
         text-align: center;
     }
 
+    .sobreNosotros p {
+        font-size: 0.9rem;
+    }
+
+    .sobreNosotros img {
+        max-width: 280px;
+    }
+
     .columnaInfo img {
         width: 50%;
     }
@@ -351,6 +351,10 @@ ul li a {
         /* Ajusta el tamaño máximo para pantallas medianas */
     }
 
+    .features {
+        grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    }
     .grupoImagenes {
         padding-left: 10px;
         margin-top: 20px;
@@ -404,7 +408,17 @@ ul li a {
         padding: 5px;
         border-radius: 5px;
     }
-
+    .contacto {
+        display: flex;
+        flex-direction: column;
+    }
+    .afliados img {
+        max-width: 100px;
+    }
+    .right {
+        max-width: 100px;
+        width: 100%
+    }
 }
 
 /* Para pantallas muy pequeñas (móviles) */
@@ -473,7 +487,7 @@ ul li a {
 }
 
 .full-title h2 {
-    font-size: 7rem;
+    font-size: 6.9rem;
     text-transform: uppercase;
     text-align: left;
     padding-left: 40px;
@@ -625,29 +639,15 @@ ul li a {
         width: 160px;
         height: 150px;
     }
-}
 
-@media (max-width: 480px) {
-    .productos h3 {
-        font-size: 24px;
-    }
-
-    .productos p {
-        font-size: 16px;
-    }
-
-    .filaInfo img {
-        max-width: 120px;
-    }
-
-    .filaInfo span {
-        font-size: 16px;
-    }
 }
 
 .contacto {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
 .formulario {
@@ -661,8 +661,6 @@ ul li a {
     margin-bottom: 15px;
     margin-top: 20px;
 }
-
-.formulario span {}
 
 .formulario form {
     margin-top: 10px;
@@ -703,8 +701,83 @@ ul li a {
     font-weight: 600;
 }
 
+.infoEmpresa {
+    max-width: 400px;
+    margin-right: 30px;
+}
+
+.tarjeta {
+    margin: 20px 30px;
+    border: 4px solid #000; 
+    background-color: #000; 
+    color: #fff; 
+    padding: 20px;
+    border-radius: 8px; 
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .tarjeta img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 4px; 
+  }
+  
+  .tarjeta h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+  }
+  
+  .tarjeta p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .tarjeta button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px; /* Opcional */
+  }
+  
+  .tarjeta button:hover {
+    background-color: #1046ab;
+    color: #fff;
+  }  
+
 .copyright {
     text-align: center;
     font-weight: 700;
     font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+    .productos h3 {
+        font-size: 24px;
+    }
+
+    .productos p {
+        font-size: 16px;
+    }
+
+    .filaInfo img {
+        max-width: 120px;
+    }
+
+    .filaInfo span {
+        font-size: 16px;
+    }
+    .contacto {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 2fr;
+    
+    }
+    
 }
